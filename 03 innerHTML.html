@@ -1,0 +1,25 @@
+<!-- This program is getting a user input and display it on the screen -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<form>
+<input type="text" id="input1"/>
+</form>
+<div><button id="button1">Button</button></div>
+<div id="demo"></div>
+
+<script>
+//EVENT LISTENER 
+var event1 = document.getElementById("button1");
+event1.addEventListener('click',myfirst,false);
+function myfirst(){
+//User input 1
+var userinput1 = document.getElementById("input1").value;
+//Output 1
+document.getElementById("demo").innerHTML = userinput1;
+}      
+</script>
+</body>
+</html>

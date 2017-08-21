@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title> 3 inputs</title>
+</head>
+<body>
+<h1>Sum</h1>
+<h2>Add three variables with a function</h2>
+<input id="input1" type=”number”/> + 
+<input id="input2" type=”number”/> + 
+<input id="input3" type=”number”/>
+
+	<input type="button" id="answer2" value="Answer2" />
+	
+	<span id="result"></span>
+	
+<script>	
+
+//BUTTON EVENT LISTENER when click runs the main function 
+var e2 = document.getElementById('answer2');
+// invoke main function when button 2 is clicked
+e2.addEventListener('click',main,false);
+		
+//MAIN function to run the procedures
+function main(){
+//CALCULATE – this invokes the function summit, takes in 3 arguments (real values) from user input,   
+//   converts to integer and then returns the total which initialises the value of the global variable sum
+var sum = summit(parseInt(input1.value), parseInt(input2.value), parseInt(input3.value));	
+// alert(sum);
+	
+//DISPLAY this function accepts 1 parameter – the argument is the value of the global variable sum and  
+//displays that value on the webpage
+displayit(sum);
+
+}	
+
+function summit(x, y, z){
+//alert(x + " " + y + " " + z);
+total = x + y + z;
+return total;
+}		
+
+function displayit(sum){
+//display on webpage 
+document.getElementById("result").innerHTML = sum;
+}		
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Please enter 2 numbers below</p>
+<form>
+<input type="number" id="input1"/>
+<input type="number" id="input2"/>
+</form>
+<div><button id="button1">Compare two numbers</button></div>
+<div id="demo"></div>
+
+
+<script>
+//EVENT LISTENER 
+var event1 = document.getElementById("button1");
+event1.addEventListener('click',myfirst,false);
+
+function myfirst(){
+//User input 1 convert in JS to a number
+var userinput1 = parseInt(document.getElementById("input1").value);
+//alert(userinput1);
+
+//User input 2 convert in JS to a number
+var userinput2 = parseInt(document.getElementById("input2").value);
+//alert(userinput2);
+
+if (userinput1 === userinput2){
+//Output 1
+
+document.getElementById("demo").innerHTML = "number is same";  
+
+} else {
+//Output 2 
+document.getElementById("demo").innerHTML = "number is different";      
+}
+
+
+}      
+</script>
+
+</body>
+</html>

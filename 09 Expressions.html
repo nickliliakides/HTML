@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<p>Conditional Test</p>
+<form>
+<input type="number" id="input1"/>
+
+
+</form>
+<div><button id="button1">Test !</button></div>
+<div id="demo"></div>
+
+<script>
+//EVENT LISTENER 
+var event1 = document.getElementById("button1");
+event1.addEventListener('click',myfirst,false);
+
+function myfirst(){
+//User input 1 convert in JS to a number
+var userinput1 = parseInt(document.getElementById("input1").value);
+
+if (userinput1 > 10){
+document.getElementById("demo").innerHTML = "number is > 10";  
+//alert(userinput1);
+} else if (userinput1 > 0) {
+document.getElementById("demo").innerHTML = "number is less than 10";    
+}
+else {
+document.getElementById("demo").innerHTML = "number is negative";    
+}   
+
+}      
+</script>
+
+</body>
+</html>

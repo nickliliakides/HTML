@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+window.addEventListener('load',setInterval(function() {window.location.reload();}, 1000),false);
+
+var dow = new Date().getDay();
+var hod = new Date().getHours();
+
+var minutes1 = new Date().getMinutes();
+var mod = minutes1 > 9 ? minutes1 : '0' + minutes1; //ternary if > 9 do this else do that
+	
+var sod = new Date().getSeconds();
+var tod = "<br>Current time is " + hod + ":" + mod + ":" + sod; 
+
+var day;
+
+switch (dow) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Saturday";
+        break;
+}
+document.getElementById("demo").innerHTML = "Today is " + day + " " + tod;
+</script>
+
+</body>
+</html>
